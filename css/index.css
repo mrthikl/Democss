@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -5,6 +7,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 .hero {
@@ -15,31 +19,64 @@ body {
 .wrapper {
   width: 100%;
   height: 100%;
-  background: black;
+  background: url(../img/background.png) center/cover no-repeat;
 }
 
 .hero .wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  position: relative;
 }
 
 .loader {
   position: relative;
-  --sizeLoader: 150px;
+  --sizeLoader: 100px;
+  --locationloader: 50px;
   width: var(--sizeLoader);
   height: var(--sizeLoader);
   border-radius: 50%;
   background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
   animation: loading 2s linear infinite;
+  position: absolute;
+  right: var(--locationloader);
+  bottom: var(--locationloader);
 }
 
-.loader:nth-of-type(1) {
-  background: linear-gradient(45deg, transparent, transparent 40%, #f43303);
+.loader p {
+  position: absolute;
+  top: -44px;
+  left: 44px;
+  color: #fff;
+  min-width: 117px;
 }
 
-.loader:nth-of-type(3) {
-  background: linear-gradient(45deg, transparent, transparent 40%, #0398f4);
+.loader p span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+  height: 85px;
+  display: block;
+}
+
+.char1 {
+  transform: rotate(-35deg);
+}
+.char2 {
+  transform: rotate(-28deg);
+  height: 60px !important;
+}
+.char3 {
+  transform: rotate(-6deg);
+}
+.char4 {
+  transform: rotate(14deg);
+}
+.char5 {
+  transform: rotate(44deg);
+  height: 60px !important;
 }
 
 @keyframes loading {
@@ -74,4 +111,210 @@ body {
   background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
   z-index: 1;
   filter: blur(30px);
+}
+
+.headLine {
+  width: 85%;
+  margin: auto;
+  color: #fff;
+  text-align: center;
+}
+
+.headLine h1 {
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.headLine h2 {
+  line-height: 0;
+}
+
+.headLine h1 span {
+  letter-spacing: 15px;
+}
+
+.headLine a {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+  overflow: hidden;
+  font-size: 30px;
+  transition: 0.3s;
+  transition-property: background, box-shadow;
+}
+
+.headLine a:hover {
+  color: #255784;
+  background: #1bd2ee;
+  box-shadow: 0 0 10px #1bd2ee, 0 0 40px #1bd2ee, 0 0 80px #1bd2ee;
+}
+
+.headLine a span {
+  position: absolute;
+  display: block;
+}
+
+.headLine a span:nth-of-type(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1bd2ee);
+  animation: loadingbtn1 1s linear infinite;
+}
+
+@keyframes loadingbtn1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.headLine a span:nth-of-type(2) {
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #1bd2ee);
+  animation: loadingbtn2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes loadingbtn2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.headLine a span:nth-of-type(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1bd2ee);
+  animation: loadingbtn3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes loadingbtn3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.headLine a span:nth-of-type(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #1bd2ee);
+  animation: loadingbtn4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes loadingbtn4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.bubbles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bubbles img {
+  width: 50px;
+  animation: bubble 7s linear infinite;
+  opacity: 0;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+
+.bubbles img:nth-child(1) {
+  animation-delay: 3s;
+}
+
+.bubbles img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.bubbles img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.bubbles img:nth-child(4) {
+  animation-delay: 1s;
+}
+
+.bubbles img:nth-child(5) {
+  animation-delay: 3s;
+}
+
+.bubbles img:nth-child(6) {
+  animation-delay: 2s;
+}
+
+.bubbles img:nth-child(7) {
+  animation-delay: 6s;
+}
+
+@media (min-width: 768px) {
+  .hero .wrapper .headLine h1 {
+    font-size: 40px;
+  }
+
+  .hero .wrapper .headLine {
+    text-align: unset;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero .wrapper .headLine h1 {
+    font-size: 50px;
+  }
+
+  .hero .wrapper .headLine h1 span {
+    letter-spacing: 25px;
+  }
 }
