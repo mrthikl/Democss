@@ -4,44 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home/jarallax.css">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <section class="hero">
+    <header class="header">
         <div class="wrapper">
-            <div class="loader">
-                <p>
-                    <span class="char1">Th</span>
-                    <span class="char2">i</span>
-                    <span class="char3">Ng</span>
-                    <span class="char4">uy</span>
-                    <span class="char5">ễn</span>
-                </p>
-            </div>
-            <div class="headLine">
-                <h2>Welcome to our</h2>
-                <h1>MY NAME IS <br> <span>TRUONGNGU</span></h1>
-                <a href="#">
-                    Take a tour
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-            </div>
-            <div class="bubbles">
-                <img src="./img/bubble.png" alt="">
-                <img src="./img/bubble.png" alt="">
-                <img src="./img/bubble.png" alt="">
-                <img src="./img/bubble.png" alt="">
-                <img src="./img/bubble.png" alt="">
-                <img src="./img/bubble.png" alt="">
-                <img src="./img/bubble.png" alt="">
-            </div>
+            <img src="./img/logo.png" alt="">
+            <a href="#">Sign in</a>
         </div>
-    </section>
+    </header>
+    <!-- <h1 class="byName">
+        <span>T</span>
+        <span>h</span>
+        <span>i</span>
+        <span>N</span>
+        <span>g</span>
+        <span>u</span>
+        <span>y</span>
+        <span>e</span>
+        <span>n</span>
+    </h1> -->
+    <main>
+        <section class="hero">
+            <div class="wrapper">
+                <div class="loader">
+
+                </div>
+                <div class="headLine">
+                    <h2>Welcome to our</h2>
+                    <!-- <h2>Welcome to our</h2> -->
+                    <h1>MY NAME IS <br> <span>TRUONGNGU</span></h1>
+                    <a href="#">
+                        Take a tour
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="bubbles">
+                    <img src="./img/bubble.png" alt="">
+                    <img src="./img/bubble.png" alt="">
+                    <img src="./img/bubble.png" alt="">
+                    <img src="./img/bubble.png" alt="">
+                    <img src="./img/bubble.png" alt="">
+                    <img src="./img/bubble.png" alt="">
+                    <img src="./img/bubble.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="parallax">
+            <div class="wrapper ">
+                <img src="./img/woman-1199x1800.png" alt="" data-jarallax-element="20 30">
+                <div class="headline">
+                    <p>we are unspun</p>
+                    <h1>ENGINEED FOR YOU FROM THE FUTURE</h1>
+                </div>
+
+            </div>
+        </section>
+        <section class="parallax">
+            <div class="wrapper bgdark">
+                <img class="jean" src="./img/jean-1703x1800.png" alt="" data-jarallax-element="50 ">
+                <div class="headline">
+                    <h1>OUR PROCESS</h1>
+                    <p>we are unspun</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./js/jarallax.js"></script>
+    <script src="./js/jarallax-element.js"></script>
+    <script>
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.5
+        });
+    </script>
 </body>
 
 </html>
