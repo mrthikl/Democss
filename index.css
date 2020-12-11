@@ -2,6 +2,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 @import url("./css/home/header.css");
 @import url("./css/home/parallax.css");
+@font-face {
+  font-family: "PxGrotesk-Screen";
+  src: url("../fonts/PxGrotesk-Screen.eot");
+  src: url("../fonts/PxGrotesk-Screen.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PxGrotesk-Screen.woff2") format("woff2"),
+    url("../fonts/PxGrotesk-Screen.woff") format("woff"),
+    url("../fonts/PxGrotesk-Screen.ttf") format("truetype"),
+    url("../fonts/PxGrotesk-Screen.svg#PxGrotesk-Screen") format("svg");
+}
+@font-face {
+  font-family: "PxGrotesk";
+  src: url("../fonts/PxGrotesk-Bold.eot");
+  src: url("../fonts/PxGrotesk-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PxGrotesk-Bold.woff2") format("woff2"),
+    url("../fonts/PxGrotesk-Bold.woff") format("woff"),
+    url("../fonts/PxGrotesk-Bold.ttf") format("truetype"),
+    url("../fonts/PxGrotesk-Bold.svg#PxGrotesk-Bold") format("svg");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "PxGrotesk";
+  src: url("../fonts/PxGroteskRegular.eot");
+  src: url("../fonts/PxGroteskRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PxGroteskRegular.woff2") format("woff2"),
+    url("../fonts/PxGroteskRegular.woff") format("woff"),
+    url("../fonts/PxGroteskRegular.ttf") format("truetype"),
+    url("../fonts/PxGroteskRegular.svg#PxGroteskRegular") format("svg");
+}
+@font-face {
+  font-family: "PxGrotesk";
+  src: url("../fonts/PxGrotesk-Light.eot");
+  src: url("../fonts/PxGrotesk-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PxGrotesk-Light.woff2") format("woff2"),
+    url("../fonts/PxGrotesk-Light.woff") format("woff"),
+    url("../fonts/PxGrotesk-Light.ttf") format("truetype"),
+    url("../fonts/PxGrotesk-Light.svg#PxGrotesk-Light") format("svg");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Plain";
+  src: url("../fonts/Plain-Thin.eot");
+  src: url("../fonts/Plain-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Plain-Thin.woff2") format("woff2"),
+    url("../fonts/Plain-Thin.woff") format("woff"),
+    url("../fonts/Plain-Thin.ttf") format("truetype"),
+    url("../fonts/Plain-Thin.svg#PxGrotesk-Light") format("svg");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Plain";
+  src: url("../fonts/Plain-Ultralight.eot");
+  src: url("../fonts/Plain-Ultralight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Plain-Ultralight.woff2") format("woff2"),
+    url("../fonts/Plain-Ultralight.woff") format("woff"),
+    url("../fonts/Plain-Ultralight.ttf") format("truetype"),
+    url("../fonts/Plain-Ultralight.svg#PxGrotesk-Light") format("svg");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -88,7 +146,7 @@ body {
   align-items: center;
   justify-content: space-around;
   position: relative;
-  background: url(../img/background.png) center/cover no-repeat;
+  background: url(./img/background.png) center/cover no-repeat;
 }
 
 .loader {

@@ -5,6 +5,11 @@
   overflow: hidden;
 }
 
+.heightMin {
+  height: 50vh;
+  min-height: unset;
+}
+
 .parallax .wrapper {
   background: #e9e9ec;
   position: relative;
@@ -15,9 +20,28 @@
   padding: 0 5%;
 }
 
-.bgdark {
-  background: #0b101b !important;
-  f
+.parallax .bgdark {
+  background: #0b101b;
+}
+
+.parallax .bgdark2 {
+  background: #183a77;
+}
+
+.parallax .bgred {
+  background: #a62c14;
+}
+
+.parallax .bgdark2::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0b101b;
+  z-index: 1;
+  opacity: 0.3;
 }
 
 .parallax .wrapper img {
@@ -26,6 +50,24 @@
   bottom: -35%;
   right: 0;
   z-index: 1;
+  object-fit: cover;
+}
+
+.parallax .bgdark2 img {
+  height: 120%;
+  width: 100%;
+}
+
+.parallax .bgred img {
+  height: 100% !important;
+  z-index: 6;
+}
+
+.parallax .bgred .headline {
+  width: 100% !important;
+  min-width: 2560px;
+  margin: auto;
+  padding: 0 !important;
 }
 
 .parallax .wrapper .jean {
@@ -37,7 +79,7 @@
 
 .parallax .wrapper .headline {
   position: relative;
-  z-index: 1;
+  z-index: 5;
 }
 
 .parallax .wrapper .headline p {
@@ -48,10 +90,33 @@
   font-size: 45px;
   color: #e75519;
   z-index: 3;
+  line-height: 0.833333333333333;
+  font-family: "PxGrotesk";
+  font-weight: normal;
 }
 
-.parallax .bgdark  .headline h1, .parallax .bgdark  .headline p {
-    color: #fff;
+.parallax .bgdark .headline h1,
+.parallax .bgdark .headline p,
+.parallax .bgdark2 .headline h1,
+.parallax .bgdark2 .headline p {
+  color: #fff;
+}
+
+.parallax .bgred .headline h1 {
+  color: #fff;
+  font-size: 157px;
+  line-height: 1;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .parallax .wrapper .headline {
+    padding: 0 50px;
+  }
+
+  .parallax .bgred img {
+    right: 30%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -62,12 +127,25 @@
     right: 2.5%;
   }
 
+  .parallax .bgdark2 img {
+    width: 60%;
+    left: 40%;
+  }
+
+  .parallax .bgdark2::after {
+    display: none;
+  }
+
+  .heightMin {
+    min-height: 100vh;
+  }
+
   .parallax .wrapper .jean {
     left: 25%;
   }
 
-  .headline {
-    width: 70%;
+  .parallax .wrapper .headline {
+    width: 80%;
     margin: auto;
   }
 
@@ -77,5 +155,37 @@
 
   .parallax .wrapper .headline h1 {
     font-size: 74px;
+  }
+
+  .parallax .bgdark .headline {
+    padding-left: 30%;
+  }
+
+  .parallax .bgdark2 .headline h1 {
+    font-size: 120px;
+    letter-spacing: 20px;
+  }
+
+  .parallax .bgred .headline h1 {
+    font-size: 557px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .parallax .wrapper .headline {
+    width: 70%;
+    padding: 0 150px;
+  }
+
+  .parallax .bgred img {
+    right: 35%;
+  }
+
+  .parallax .bgdark .headline {
+    padding-left: 40%;
+  }
+
+  .parallax .bgdark2 .headline {
+    padding: 0;
   }
 }
