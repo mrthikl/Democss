@@ -146,7 +146,8 @@ body {
   align-items: center;
   justify-content: space-around;
   position: relative;
-  background: url(./img/background.png) center/cover no-repeat;
+  /* background: url(./img/background.png) center/cover no-repeat; */
+  background: #000;
 }
 
 .loader {
